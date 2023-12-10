@@ -273,7 +273,7 @@ var LiveView = (() => {
             history.replaceState(currentState, "", window.location.href);
           }
           delete meta.scroll;
-          if (meta == "replace") {
+          if (kind == "replace") {
             history[kind + "State"](meta, "", to || null);
           }
           let hashEl = this.getHashTargetEl(window.location.hash);
